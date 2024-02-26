@@ -10,6 +10,8 @@ int top = -1;
 void push(int);
 int pop();
 void display();
+bool isEmpty();
+bool isFull();
 
 
 int main(){
@@ -66,5 +68,22 @@ int pop() {
 }
 
 void display(stack){
-    for(int i = 0; i < length(stack); i++)
+    if(top == -1)
+        cout<<"\nStack is empty!!!";
+    else{
+        int i;
+        for(i = top; i > 0; i--){
+            cout<<stack[i];
+        }
+    }
+}
+
+bool isEmpty(){
+    if(top == -1)
+        return true
+}
+
+bool isFull(){
+    if(top == SIZE -1)
+        return false;
 }
