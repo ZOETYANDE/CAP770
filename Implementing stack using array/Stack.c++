@@ -48,7 +48,7 @@ int main(){
 
 // Push function
 void push(int n){
-    if(top == 19){
+    if(isFull()){
         cout<<"Stack is overloaded"<<endl;
         exit(1);
     }
@@ -59,7 +59,7 @@ void push(int n){
 
 // Pop function
 int pop() {
-    if(top == -1){
+    if(isEmpty()){
         cout<<"Stack is empty";
         exit(1);
     }
@@ -68,7 +68,7 @@ int pop() {
 }
 
 void display(stack){
-    if(top == -1)
+    if(isEmpty())
         cout<<"\nStack is empty!!!";
     else{
         int i;
@@ -80,10 +80,14 @@ void display(stack){
 
 bool isEmpty(){
     if(top == -1)
-        return true
+        return true;
+    else
+        return false;
 }
 
 bool isFull(){
-    if(top == SIZE -1)
+    if(top == SIZE - 1)
+        return true;
+    else
         return false;
 }
