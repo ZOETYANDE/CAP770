@@ -90,4 +90,7 @@ int main()
     {
         printf("\nBALANCED EXPRESSION\n"); // Finally if the stack is empty, display that the expression is balanced
     }
+    else {
+        printf("\nUNBALENCED EXPRESSION\n");
+    }
 }
