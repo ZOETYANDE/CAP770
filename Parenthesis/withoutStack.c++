@@ -7,7 +7,7 @@ int main()
 char expression[50]; // declaration of char type array
 int x=0, i=0; // declaration of two integer type variables
 cout<<"\nEnter an expression: ";
-scanf("%s", expression);
+scanf("%[^\n]s", expression);
 // Scanning the expression until we reach the end of the expression.
 while(expression[i]!= '\0')
 {
